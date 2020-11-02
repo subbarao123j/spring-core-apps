@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean/> definitions here -->
+
+
+
+
+	<bean id="employee1" class="com.spring.Employee">
+
+		<property name="id" value="101"></property>
+		<property name="name" value="Subabrao"></property>
+
+	</bean>
+
+
+	<bean id="employee2" class="com.spring.Employee">
+
+		<property name="id" value="102"></property>
+		<property name="name" value="Prashanth"></property>
+
+	</bean>
+
+	<bean id="employee3" class="com.spring.Employee">
+
+		<property name="id" value="103"></property>
+		<property name="name" value="ram"></property>
+
+	</bean>
+
+	<bean id="department" class="com.spring.Department">
+
+		<property name="employees">
+			<list>
+
+				<ref bean="employee1" />
+				<ref bean="employee2" />
+				<ref bean="employee3" />
+			</list>
+
+
+
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+</beans>
